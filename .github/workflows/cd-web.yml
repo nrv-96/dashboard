@@ -15,13 +15,8 @@
 name: CD / Web
 on:
   push:
-    branches: [master]
-    paths:
-      - .github/workflows/cd-web.yml
-      - modules/web
-      - modules/common
-      - hack/docker
-      - hack/gateway
+    branches:
+      - master
     tags:
       - "web/v*.*.*"
 permissions:
