@@ -79,4 +79,3 @@ jobs:
             ```
             docker.io/kubernetesui/dashboard-web:${{ steps.meta.outputs.version }}
             ```
-feat: refactor verber and fix client-side throttling due to client init misconfiguration (#8900) · kubernetes/dashboard@fbcde7d
