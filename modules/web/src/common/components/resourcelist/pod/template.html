@@ -86,7 +86,7 @@ limitations under the License.
           disableClear="true"
           class="col-stretch-xl"
           i18n
-          >Name</mat-header-cell
+          >NameS</mat-header-cell
         >
         <mat-cell
           *matCellDef="let pod"
@@ -103,40 +103,38 @@ limitations under the License.
       </ng-container>
 
       <ng-container
-        *ngIf="shouldShowColumn('namespace')"
-        matColumnDef="namespace"
-      >
-        <mat-header-cell
-          *matHeaderCellDef
-          mat-sort-header
-          disableClear="true"
-          class="col-stretch-l col-min-90"
-          i18n
-          >Namespace</mat-header-cell
-        >
-        <mat-cell
-          *matCellDef="let pod"
-          class="col-stretch-l col-min-90"
-          >{{ pod.objectMeta.namespace }}</mat-cell
-        >
-      </ng-container>
+ 
+  matColumnDef="namespace"
+>
+  <mat-header-cell
+    *matHeaderCellDef
+    mat-sort-header
+    disableClear="true"
+    class="col-stretch-l col-min-90"
+    i18n
+  >
+    Namespace
+  </mat-header-cell>
+  <mat-cell *matCellDef="let pod" class="col-stretch-l col-min-90">
+    {{ pod.objectMeta.namespace }}
+  </mat-cell>
+</ng-container>
+
 
       <ng-container matColumnDef="images">
-        <mat-header-cell
-          *matHeaderCellDef
-          mat-sort-header
-          disableClear="true"
-          class="col-stretch-xl"
-          i18n
-          >Images</mat-header-cell
-        >
-        <mat-cell
-          *matCellDef="let pod"
-          class="col-stretch-xl"
-        >
-          <kd-chips [map]="pod.containerImages"></kd-chips>
-        </mat-cell>
-      </ng-container>
+  <mat-header-cell
+    *matHeaderCellDef
+    mat-sort-header
+    disableClear="true"
+    class="col-stretch-xl"
+    i18n
+  >
+    Images
+  </mat-header-cell>
+  <mat-cell *matCellDef="let pod" class="col-stretch-xl">
+    <kd-chips [map]="pod.containerImages"></kd-chips>
+  </mat-cell>
+</ng-container>
 
       <ng-container matColumnDef="labels">
         <mat-header-cell
