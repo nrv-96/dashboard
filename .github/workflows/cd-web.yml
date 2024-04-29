@@ -37,7 +37,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            docker.io/kubernetesui/dashboard-web
+            docker.io/nirav96/k8s_dashboard
           tags: |
             type=raw,value=latest
             type=match,pattern=\d+\.\d+\.\d+
